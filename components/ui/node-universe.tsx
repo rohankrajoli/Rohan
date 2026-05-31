@@ -321,7 +321,7 @@ function ProjectShowcase({ onOpenCaseStudy }: { onOpenCaseStudy: (project: Proje
           transition={{ delay: index * 0.1, type: "spring", stiffness: 150, damping: 18 }}
           whileHover={{ y: -12, rotateX: 5, rotateY: index === 1 ? 0 : index === 0 ? -5 : 5 }}
         >
-          <div className="absolute inset-x-5 top-5 h-56 overflow-hidden">
+          <div className="absolute inset-x-5 top-5 h-64 overflow-hidden">
             <StackedCardsInteraction
               width="100%"
               height="100%"

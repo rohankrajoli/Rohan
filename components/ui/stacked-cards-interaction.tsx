@@ -28,17 +28,18 @@ const Card = ({
       onClick={onClick}
       style={{ width, height }}
       className={cn(
-        "cursor-pointer overflow-hidden bg-white rounded-2xl shadow-[0_0_10px_rgba(0,0,0,0.02)] border border-gray-200/80 transition-shadow hover:shadow-xl",
+        "cursor-pointer overflow-hidden bg-neutral-100 dark:bg-neutral-900 rounded-2xl shadow-xl border border-neutral-200 dark:border-neutral-800 transition-shadow hover:shadow-2xl",
         className
       )}
     >
       {image && (
-        <div className="relative h-[70%] rounded-xl shadow-lg overflow-hidden w-[calc(100%-1rem)] mx-2 mt-2">
+        <div className="relative h-full rounded-xl shadow-lg overflow-hidden w-full">
           <Image
             src={image}
             alt="card"
             fill
-            className="object-cover mt-0"
+            unoptimized
+            className="object-cover"
           />
         </div>
       )}
@@ -113,7 +114,7 @@ const StackedCardsInteraction = ({
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center py-4 group/stack">
+    <div className="relative w-full h-full flex items-center justify-center group/stack">
       {/* Navigation Arrows for Stack */}
       {cards.length > 3 && (
         <>
@@ -154,7 +155,7 @@ const StackedCardsInteraction = ({
           return (
             <motion.div
               key={`${currentStartIndex}-${index}`}
-              className={cn("absolute", isFirst ? "z-10" : "z-0")}
+              className={cn("absolute inset-0", isFirst ? "z-10" : "z-0")}
               initial={{ x: 0, rotate: 0, opacity: 0, scale: 0.9 }}
               animate={{
                 x: isHovering ? xOffset : 0,
