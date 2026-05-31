@@ -107,7 +107,7 @@ export const MinimalistHero = ({
         className,
       )}
     >
-      <div className="absolute inset-0 z-0 hidden dark:block">
+      <div className="pointer-events-none absolute inset-0 z-0 hidden dark:block -translate-y-[25%] md:-translate-y-[35%]">
         <LampEffect />
       </div>
       <header className="z-30 flex w-full max-w-7xl items-center justify-between">
@@ -163,7 +163,7 @@ export const MinimalistHero = ({
                   delay: 0.2
                 }
               }}
-              className="absolute z-0 aspect-square h-[280px] w-[280px] rounded-full bg-[#EAB308] dark:hidden md:h-[400px] md:w-[400px] lg:h-[480px] lg:w-[480px]"
+              className="absolute z-0 aspect-square h-[280px] w-[280px] rounded-full bg-[#EAB308] md:h-[400px] md:w-[400px] lg:h-[480px] lg:w-[480px]"
             />
             
             {/* Image Loader */}
