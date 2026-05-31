@@ -107,7 +107,7 @@ export const MinimalistHero = ({
         className,
       )}
     >
-      <div className="pointer-events-none absolute inset-0 z-0 hidden dark:block -translate-y-[25%] md:-translate-y-[35%]">
+      <div className="pointer-events-none absolute inset-0 z-0 -translate-y-[25%] md:-translate-y-[35%]">
         <LampEffect />
       </div>
       <header className="z-30 flex w-full max-w-7xl items-center justify-between">
